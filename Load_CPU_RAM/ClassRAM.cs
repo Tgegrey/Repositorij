@@ -11,9 +11,6 @@ namespace Load_CPU_RAM
     {
         // Накопительный массив заполняющий память
         public static ArrayList arrayList = new ArrayList();
-
-        // Переменная хранит размер массива под Пул
-        public static int arrayList_Count;
         
         // Положить объект "pattern" в лист.
         public static void FillMemory()
@@ -24,8 +21,6 @@ namespace Load_CPU_RAM
 
                 arrayList.Add(value: @pattern);
             }
-
-            arrayList_Count = arrayList.Count; // Посчитали текущий размер листа
         }
     }
 }

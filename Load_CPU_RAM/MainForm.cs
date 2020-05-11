@@ -25,16 +25,6 @@ namespace Load_CPU_RAM
         public MainForm()
         {
             InitializeComponent();
-
-            btnPauseFillRAM.Enabled = false; 
-            btnPauseFillRAM.BackColor = Color.LightGray;
-
-            btnFreeRAM.Enabled = false;
-            btnFreeRAM.BackColor = Color.LightGray;
-
-            btnStop.Enabled = false;
-            btnStop.BackColor = Color.LightGray;
-
             lblTotalCoreValue.Text = numberOfCore.ToString();
             nudReservedCoreValue.Maximum = numberOfCore - 1;
         }
@@ -142,10 +132,6 @@ namespace Load_CPU_RAM
                 btnFreeRAM.BackColor = Color.DeepSkyBlue;
             }
 
-            // Отладка листа коллекций
-            // decimal ListSize = ClassRAM.arrayList_Count;
-            // lblPoolSize.Text = ListSize.ToString();
-
             int totalCPUUsage = 0; // Объявляем переменную для хранения текущей загрузки CPU
 
             // Забираем в цикле искомые значения загрузки ЦП
@@ -195,9 +181,6 @@ namespace Load_CPU_RAM
         private void btnFreeRAM_Click(object sender, EventArgs e)
         {
             ClassRAM.arrayList.Clear();
-
-            // .......Вызов сборщика мусора..........
-            // long totalMemory = GC.GetTotalMemory(false);
 
             GC.Collect(); 
             GC.WaitForPendingFinalizers();
@@ -295,7 +278,7 @@ namespace Load_CPU_RAM
             {
                 threads[i] = new Thread(() =>
                 {
-                    for (int j = 1; j < 700000000; j++)
+                    for (int j = 1; j < int.MaxValue; j++)
                     {
                         result *= j;
                     }

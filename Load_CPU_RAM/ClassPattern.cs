@@ -20,8 +20,6 @@ namespace Load_CPU_RAM
 
         public ClassPattern()
         {
-           
-
             for (int i = 0; i < length; i++)
             {
                 FillPattern[i] = (int)random.Next(minValue: 0, maxValue: 2);

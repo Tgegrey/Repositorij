@@ -163,7 +163,8 @@
             // 
             // btnPauseFillRAM
             // 
-            this.btnPauseFillRAM.BackColor = System.Drawing.Color.Yellow;
+            this.btnPauseFillRAM.BackColor = System.Drawing.Color.LightGray;
+            this.btnPauseFillRAM.Enabled = false;
             this.btnPauseFillRAM.Location = new System.Drawing.Point(433, 97);
             this.btnPauseFillRAM.Name = "btnPauseFillRAM";
             this.btnPauseFillRAM.Size = new System.Drawing.Size(75, 48);
@@ -197,7 +198,8 @@
             // 
             // btnFreeRAM
             // 
-            this.btnFreeRAM.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnFreeRAM.BackColor = System.Drawing.Color.LightGray;
+            this.btnFreeRAM.Enabled = false;
             this.btnFreeRAM.Location = new System.Drawing.Point(515, 97);
             this.btnFreeRAM.Name = "btnFreeRAM";
             this.btnFreeRAM.Size = new System.Drawing.Size(114, 48);
@@ -342,7 +344,8 @@
             // 
             // btnStop
             // 
-            this.btnStop.BackColor = System.Drawing.Color.Lime;
+            this.btnStop.BackColor = System.Drawing.Color.LightGray;
+            this.btnStop.Enabled = false;
             this.btnStop.Location = new System.Drawing.Point(479, 85);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(149, 60);
